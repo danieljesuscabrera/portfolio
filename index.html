@@ -12,12 +12,15 @@
     <a href="#sm">Sobre mí</a>
     <a href="#hb">Habilidades</a>
     <a href="#exp">Experiencia</a>
+    <a href="#proy">Proyectos</a>
     <a href="#cont">Contacto</a>
 </nav>
-
+<div class="banner">
+    <img src="banner.png" alt="Banner">
+</div>
  <header>
 
-    <img src="fotoperfil.jpg" alt="Foto de perfil">
+    <img src="fotoperfil.png" alt="Foto de perfil" id="perfil">
 
     <div>
         <h1>Daniel Jesús</h1>
@@ -72,6 +75,27 @@
     Actualmente en transición al rubro IT y estudiando QA Testing.
   </p>
 </section>
+<section id="proy">
+
+    <h2>Proyectos</h2>
+
+    <div class="proy">
+
+        <h3>Portfolio Personal</h3>
+
+        <p>
+            Portfolio desarrollado con HTML y CSS para mostrar
+            mi perfil profesional y proyectos.
+        </p>
+
+        <a href="https://danieljesuscabrera.github.io/portfolio/" target="_blank">
+            Ver Proyecto
+        </a>
+
+    </div>
+
+</section>
+
   <section id="cont">
     <h2>Contacto</h2>
     <p>Email:danieljesuscabrera22@gmail.com</p>
@@ -80,5 +104,30 @@
     <p>© 2026 Daniel Jesús</p>
 </footer>
 </main>
+<div id="modal" class="modal">
+    <img id="img-grande">
+</div>
+
+<script>
+
+const perfil = document.getElementById("perfil");
+
+const modal = document.getElementById("modal");
+
+const imgGrande = document.getElementById("img-grande");
+
+perfil.onclick = function(){
+
+    modal.style.display = "flex";
+
+    imgGrande.src = "imagen_grande.png";
+}
+
+modal.onclick = function(){
+
+    modal.style.display = "none";
+}
+
+</script>
 </body>
 </html>

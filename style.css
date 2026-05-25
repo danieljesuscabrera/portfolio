@@ -37,6 +37,7 @@ h2:hover{
     color: white;
     transition: 0.3s;
 }
+
 header{
     display: flex;
     align-items: center;
@@ -52,21 +53,23 @@ section{
     transition: 0.3s;
     opacity: 0;
 animation: aparecer 1s forwards;
+border: 1px solid #222;
     
 }
 section:hover{
     transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(77,166,255,0.3);
 }
 main{
     max-width: 900px;
     margin: auto;
 }
-img{
-    width: 140px;
-    height: 140px;
+#perfil{
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #4da6ff;
+   /* border: 3px solid #4da6ff;*/
 }
 nav{
     display: flex;
@@ -78,6 +81,7 @@ nav{
 nav a{
     color: white;
     text-decoration: none;
+    position: relative;
 }
 
 nav a:hover{
@@ -101,4 +105,74 @@ footer{
 }
 html{
     scroll-behavior: smooth;
+}
+.banner img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 40px;
+     opacity: 0.9;
+}
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal img{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+.proy{
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.proy h3{
+    color: #4da6ff;
+}
+
+.proy a{
+    color: white;
+    text-decoration: none;
+    background-color: #4da6ff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.proy a:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+@media(max-width: 768px){
+
+header{
+    flex-direction: column;
+    text-align: center;
+}
+
+#perfil{
+    width: 160px;
+    height: 160px;
+}
+
+nav{
+    flex-direction: column;
+    align-items: center;
+}
+
 }
